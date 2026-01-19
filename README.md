@@ -55,8 +55,6 @@ Configure Connection:
 
 Update the MySQL connection string in your VB code to match your local server (e.g., server=localhost; user=root; database=tnt_db).
 
-Run: Press F5 in Visual Studio to launch.
-
 🗄️ Core Database Tables
 sentiment_tbl: Stores all resident submissions and their current statuses (Submitted, Approved, Denied, Redirected).
 
