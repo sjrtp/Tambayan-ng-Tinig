@@ -3,42 +3,52 @@ TAMBAYAN NG TINIG: A PUBLIC FREEDOM SENTIMENT KIOSK SYSTEM FOR BARANGAY MUZON SO
 
 
 
+That’s a very important technical detail. Using ODBC (Open Database Connectivity) is the bridge that allows your Visual Basic 2008 application to talk to your MySQL database.
+
+I've updated the Installation & Setup and Technologies sections to specifically mention the MySQL ODBC Driver, which is the piece of software someone else would need to install to make your project work.
+
 🗣️ Tambayan ng Tinig (Voice Hangout)
-Tambayan ng Tinig is a resident feedback and sentiment management system built with Visual Basic .NET. It features a public kiosk for resident submissions and a secure administrative dashboard for barangay officials to track, resolve, and audit community concerns.
+Tambayan ng Tinig is a resident feedback and sentiment management system developed using Visual Basic 2008. This application serves as a bridge between the community and local leadership, providing a public kiosk for resident submissions and a secure administrative dashboard for tracking, resolving, and auditing concerns.
 
 🚀 Key Features
 🖥️ Kiosk Interface (Resident Side)
-Standardized Data Entry: Residents use standard hardware input for fast and reliable data submission.
+Standardized Data Entry: Optimized for fast and reliable data submission using standard input hardware.
 
-Validation: Strict input masking for contact numbers (11 digits), numeric-only block/lot fields, and character limits (80 for subjects).
+Validation & Constraints: * Strict input masking for contact numbers (11 digits).
 
-Dynamic Address Guides: Address formats automatically adjust based on the selected subdivision (e.g., Harmony Hills vs. Pabahay 2000).
+Numeric-only restrictions for Block and Lot fields.
 
-Sentiment Categorization: Residents can classify inputs as Suggestion, Complaint, Feedback, or Others.
+Character limit of 80 for subject lines to ensure conciseness.
 
-Auto-Reference Generation: Instantly provides a unique Reference Number (e.g., MZN-2025-HAR-C001) for tracking.
+Adaptive Address Formatting: The interface dynamically adjusts address guides based on the selected area—such as Harmony Hills or Pabahay 2000—to ensure the data matches the specific layout of the neighborhood.
+
+Sentiment Categorization: Residents can classify their input as a Suggestion, Complaint, Feedback, or Others.
+
+Auto-Reference Generation: The system instantly generates a unique Reference Number (e.g., MZN-2025-HAR-C001) for every submission.
 
 🛡️ Admin Dashboard (Official Side)
-Role-Based Access Control (RBAC): Distinct access levels for Admin, Secretary, and Captain.
+Role-Based Access Control (RBAC): Secure login with distinct permissions for Admin, Secretary, and Captain accounts.
 
-Audit Trails:
+Comprehensive Audit Trails: * Account Logs: Monitors login and logout times for security auditing.
 
-Account Logs: Tracks every login and logout time for security.
+Sentiment Logs: Tracks every status change including who made the change and when.
 
-Sentiment Logs: Records exactly who changed a ticket status (e.g., from Submitted to Approved or Denied) and when.
+Complaint Analytics: Automatically tracks and tallies complaints directed toward specific individuals.
 
-Complaint Analytics: Automatically tracks and counts complaints against specific individuals in the complained_person_tbl.
-
-System Configuration: Admins can manage global parameters, including a Daily Submission Limit of 10.
+System Configuration: Global settings management, including a Daily Submission Limit of 10 entries.
 
 🛠️ Technologies Used
-Language: Visual Basic .NET (VB.NET)
+Language: Visual Basic .NET
+
+IDE: Microsoft Visual Basic 2008
 
 Database: MySQL (tnt_db)
 
-Framework: Windows Forms (WinForms)
+Connectivity: ODBC (Open Database Connectivity)
 
-Tools: Visual Studio, phpMyAdmin
+Driver: MySQL ODBC 3.51 or 5.1 Driver (depending on your specific version)
+
+Tools: XAMPP / phpMyAdmin
 
 ⚙️ Installation & Setup
 Clone the repository:
@@ -47,19 +57,31 @@ Bash
 git clone https://github.com/yourusername/tambayan-ng-tinig.git
 Database Setup:
 
-Create a MySQL database named tnt_db.
+Ensure XAMPP or a MySQL server is running.
 
-Import the provided tnt_db.sql file located in the /database folder.
+Create a new database named tnt_db and import the tnt_db.sql file.
+
+Install ODBC Driver:
+
+You must install the MySQL ODBC Connector on your Windows machine.
+
+Go to Control Panel > Administrative Tools > Data Sources (ODBC).
+
+Create a System DSN or ensure your connection string matches the driver version installed (e.g., Driver={MySQL ODBC 5.1 Driver}).
 
 Configure Connection:
 
-Update the MySQL connection string in your VB code to match your local server (e.g., server=localhost; user=root; database=tnt_db).
+Open the project in Visual Basic 2008.
 
-🗄️ Core Database Tables
-sentiment_tbl: Stores all resident submissions and their current statuses (Submitted, Approved, Denied, Redirected).
+Update the OdbcConnection string in your code to match your local credentials.
 
-accounts_tbl: Manages authentication and security for officials.
+🗄️ Core Database Schema
+The system relies on several relational tables within tnt_db:
 
-sentiment_logs_tbl: An audit trail that tracks all status transitions and field modifications.
+sentiment_tbl: The core table storing all resident reports and current status.
 
-system_config_tbl: Stores system-wide settings like the daily submission limit.
+accounts_tbl: Stores user credentials and access levels.
+
+sentiment_logs_tbl: Audit trail for tracking all modifications.
+
+system_config_tbl: Stores application-wide parameters like the daily submission limit (10).
