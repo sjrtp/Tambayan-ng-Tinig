@@ -2,11 +2,6 @@
 TAMBAYAN NG TINIG: A PUBLIC FREEDOM SENTIMENT KIOSK SYSTEM FOR BARANGAY MUZON SOUTH, CITY OF SAN JOSE DEL MONTE, BULACAN
 
 
-
-That’s a very important technical detail. Using ODBC (Open Database Connectivity) is the bridge that allows your Visual Basic 2008 application to talk to your MySQL database.
-
-I've updated the Installation & Setup and Technologies sections to specifically mention the MySQL ODBC Driver, which is the piece of software someone else would need to install to make your project work.
-
 🗣️ Tambayan ng Tinig (Voice Hangout)
 Tambayan ng Tinig is a resident feedback and sentiment management system developed using Visual Basic 2008. This application serves as a bridge between the community and local leadership, providing a public kiosk for resident submissions and a secure administrative dashboard for tracking, resolving, and auditing concerns.
 
@@ -26,6 +21,7 @@ Sentiment Categorization: Residents can classify their input as a Suggestion, Co
 
 Auto-Reference Generation: The system instantly generates a unique Reference Number (e.g., MZN-2025-HAR-C001) for every submission.
 
+
 🛡️ Admin Dashboard (Official Side)
 Role-Based Access Control (RBAC): Secure login with distinct permissions for Admin, Secretary, and Captain accounts.
 
@@ -36,6 +32,8 @@ Sentiment Logs: Tracks every status change including who made the change and whe
 Complaint Analytics: Automatically tracks and tallies complaints directed toward specific individuals.
 
 System Configuration: Global settings management, including a Daily Submission Limit of 10 entries.
+
+
 
 🛠️ Technologies Used
 Language: Visual Basic .NET
@@ -50,16 +48,21 @@ Driver: MySQL ODBC 3.51 or 5.1 Driver (depending on your specific version. Dev u
 
 Tools: XAMPP / phpMyAdmin
 
+
+
 ⚙️ Installation & Setup
 Clone the repository:
-
 Bash
 git clone https://github.com/yourusername/tambayan-ng-tinig.git
 Database Setup:
 
+
+
 Ensure XAMPP or a MySQL server is running.
 
 Create a new database named tnt_db and import the tnt_db.sql file.
+
+
 
 Install ODBC Driver:
 
@@ -75,6 +78,8 @@ Open the project in Visual Basic 2008.
 
 Update the OdbcConnection string in your code to match your local credentials.
 
+
+
 🗄️ Core Database Schema
 The system relies on several relational tables within tnt_db:
 
@@ -87,6 +92,8 @@ sentiment_logs_tbl: Audit trail for tracking all modifications.
 system_config_tbl: Stores application-wide parameters like the daily submission limit (10).
 
 
+
+
 ## 🛠 How to Setup (For Testing)
 
 ### 1. Database Setup
@@ -94,6 +101,8 @@ system_config_tbl: Stores application-wide parameters like the daily submission 
 * Go to `localhost/phpmyadmin`.
 * Create a database named `tnt_db`.
 * Click **Import** and select the `tnt_db.sql` file from this repository.
+
+
 
 ### 2. ODBC Driver (Required)
 Since this app uses ODBC to connect to MySQL:
