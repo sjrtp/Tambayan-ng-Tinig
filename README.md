@@ -46,7 +46,7 @@ Database: MySQL (tnt_db)
 
 Connectivity: ODBC (Open Database Connectivity)
 
-Driver: MySQL ODBC 3.51 or 5.1 Driver (depending on your specific version)
+Driver: MySQL ODBC 3.51 or 5.1 Driver (depending on your specific version. Dev used 9.3.0 https://downloads.mysql.com/archives/c-odbc/)
 
 Tools: XAMPP / phpMyAdmin
 
