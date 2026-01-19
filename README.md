@@ -85,3 +85,22 @@ accounts_tbl: Stores user credentials and access levels.
 sentiment_logs_tbl: Audit trail for tracking all modifications.
 
 system_config_tbl: Stores application-wide parameters like the daily submission limit (10).
+
+
+## 🛠 How to Setup (For Testing)
+
+### 1. Database Setup
+* Open XAMPP and start **Apache** and **MySQL**.
+* Go to `localhost/phpmyadmin`.
+* Create a database named `tnt_db`.
+* Click **Import** and select the `tnt_db.sql` file from this repository.
+
+### 2. ODBC Driver (Required)
+Since this app uses ODBC to connect to MySQL:
+* Download and install the **MySQL ODBC Connector (3.51 or 5.1)**.
+* Open **ODBC Data Source Administrator** on your Windows PC.
+* Add a new **System DSN** named `tnt_db` (or whatever name you used in your code).
+* Link it to your MySQL server (usually `localhost`, user `root`, no password).
+
+### 3. Run the App
+* Open the installed application and start submitting feedback!
