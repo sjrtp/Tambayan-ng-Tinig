@@ -5,8 +5,8 @@ TAMBAYAN NG TINIG: A PUBLIC FREEDOM SENTIMENT KIOSK SYSTEM FOR BARANGAY MUZON SO
 🗣️ Tambayan ng Tinig (Voice Hangout)
 Tambayan ng Tinig is a resident feedback and sentiment management system developed using Visual Basic 2008. This application serves as a bridge between the community and local leadership, providing a public kiosk for resident submissions and a secure administrative dashboard for tracking, resolving, and auditing concerns.
 
-🚀 Key Features
-🖥️ Kiosk Interface (Resident Side)
+Key Features:
+Kiosk Interface (Resident Side):
 Standardized Data Entry: Optimized for fast and reliable data submission using standard input hardware.
 
 Validation & Constraints: * Strict input masking for contact numbers (11 digits).
@@ -22,7 +22,7 @@ Sentiment Categorization: Residents can classify their input as a Suggestion, Co
 Auto-Reference Generation: The system instantly generates a unique Reference Number (e.g., MZN-2025-HAR-C001) for every submission.
 
 
-🛡️ Admin Dashboard (Official Side)
+Admin Dashboard (Official Side):
 Role-Based Access Control (RBAC): Secure login with distinct permissions for Admin, Secretary, and Captain accounts.
 
 Comprehensive Audit Trails: * Account Logs: Monitors login and logout times for security auditing.
@@ -35,7 +35,7 @@ System Configuration: Global settings management, including a Daily Submission L
 
 
 
-🛠️ Technologies Used
+Technologies Used:
 Language: Visual Basic .NET
 
 IDE: Microsoft Visual Basic 2008
@@ -50,7 +50,7 @@ Tools: XAMPP / phpMyAdmin
 
 
 
-⚙️ Installation & Setup
+Installation & Setup:
 Clone the repository:
 Bash
 git clone https://github.com/yourusername/tambayan-ng-tinig.git
@@ -80,7 +80,7 @@ Update the OdbcConnection string in your code to match your local credentials.
 
 
 
-🗄️ Core Database Schema
+Core Database Schema:
 The system relies on several relational tables within tnt_db:
 
 sentiment_tbl: The core table storing all resident reports and current status.
@@ -94,7 +94,7 @@ system_config_tbl: Stores application-wide parameters like the daily submission 
 
 
 
-## 🛠 How to Setup (For Testing)
+## How to Setup (For Testing)
 
 ### 1. Database Setup
 * Open XAMPP and start **Apache** and **MySQL**.
