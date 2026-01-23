@@ -2,7 +2,7 @@
 TAMBAYAN NG TINIG: A PUBLIC FREEDOM SENTIMENT KIOSK SYSTEM FOR BARANGAY MUZON SOUTH, CITY OF SAN JOSE DEL MONTE, BULACAN
 
 
-🗣️ Tambayan ng Tinig (Voice Hangout)
+Tambayan ng Tinig
 Tambayan ng Tinig is a resident feedback and sentiment management system developed using Visual Basic 2008. This application serves as a bridge between the community and local leadership, providing a public kiosk for resident submissions and a secure administrative dashboard for tracking, resolving, and auditing concerns.
 
 Key Features:
